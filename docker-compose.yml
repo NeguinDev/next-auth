@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: secola
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: goiaba
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
